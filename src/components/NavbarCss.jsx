@@ -1,17 +1,15 @@
 import React from 'react';
 import './css/NavbarCss.css';
-const NavbarCss = ({setSelection, current, options}) => {
+const NavbarCss = ({options, basePath}) => {
 
   const menuList = options.map((item, index) => {
     return (
-      <li key={index} 
-          onClick={() => setSelection(item.option, item.path)}
-          > 
-        <span href="/"
-        className={`${current === item.option?'active':''}`}
+      <li key={index}> 
+        <a href={window.location.origin+basePath+item.path}
+        className={`${window.location.pathname=== basePath + item.path?'active':''}`}
         >
           {item.option}
-        </span>
+        </a>
       </li>
     )
   })

@@ -6,6 +6,7 @@ import Translator from './components/Translator';
 import NavbarCss from './components/NavbarCss';
 import Route from './components/Route';
 
+const basePathName = '/widgets';
 
 const menu = [
   {
@@ -26,31 +27,14 @@ const menu = [
   }
 ]
 
-const basePathName = '/widgets';
-
 class App extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      component: 'Videos',
-      pathname:window.location.pathname
-    }
-  }
-
-  updateCurrent = (option, path) => {
-    this.setState({
-      component:option,
-      pathname:window.location.pathname
-       });
-  }
-
+  
   render(){
-    const current = this.state.component;
-    // const pathname = this.state.pathname;
     return(
       <div>
-         <NavbarCss setSelection={this.updateCurrent} 
-                    current={current} options={menu} />
+         <NavbarCss options={menu}
+                    basePath={basePathName}
+          />
           <Route path={basePathName + '/'}>
             {/* inner component inside a component = children prop */}
              <Youtube />
