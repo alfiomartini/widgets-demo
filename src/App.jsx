@@ -52,6 +52,7 @@ class App extends React.Component {
          <NavbarCss setSelection={this.updateCurrent} 
                     current={current} options={menu} />
           <Route path={basePathName + '/'}>
+            {/* inner component inside a component = children prop */}
              <Youtube />
           </Route>
           <Route path={basePathName}>
