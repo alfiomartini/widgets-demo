@@ -3,7 +3,8 @@ import Youtube from './components/Youtube';
 import Pictures from './components/Pictures';
 import WikiSearch from './components/WikiSearch';
 import Translator from './components/Translator';
-import NavbarCss from './components/NavbarCss'
+import NavbarCss from './components/NavbarCss';
+import Route from './components/Route';
 
 
 const menu = [
@@ -39,21 +40,32 @@ class App extends React.Component {
   updateCurrent = (option, path) => {
     this.setState({
       component:option,
-      pathname:window.location.pathname + path
+      pathname:window.location.pathname
        });
   }
 
   render(){
     const current = this.state.component;
-    const pathname = this.state.pathname;
+    // const pathname = this.state.pathname;
     return(
       <div>
          <NavbarCss setSelection={this.updateCurrent} 
                     current={current} options={menu} />
-         {pathname === '/widgets' && <Youtube />}
-         {pathname === '/widgets/translate' && <Translator />}
-         {pathname === '/widgets/wiki' && <WikiSearch />}
-         {pathname === '/widgets/pictures' && <Pictures />}
+          <Route path={basePathName + '/'}>
+             <Youtube />
+          </Route>
+          <Route path={basePathName}>
+             <Youtube />
+          </Route>
+          <Route path={basePathName + '/translate'}>
+             <Translator />
+          </Route>
+          <Route path={basePathName + '/wiki'}>
+             <WikiSearch />
+          </Route>
+          <Route path={basePathName + '/pictures'}>
+             <Pictures/>
+          </Route>
       </div>
     )
   }
