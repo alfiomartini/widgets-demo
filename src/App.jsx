@@ -25,27 +25,35 @@ const menu = [
   }
 ]
 
+const basePathName = '/widgets';
+
 class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      component: 'Videos'
+      component: 'Videos',
+      pathname:window.location.pathname
     }
   }
 
-  updateCurrent = (option) => {
-    this.setState({component:option});
+  updateCurrent = (option, path) => {
+    this.setState({
+      component:option,
+      pathname:window.location.pathname + path
+       });
   }
 
   render(){
     const current = this.state.component;
+    const pathname = this.state.pathname;
     return(
       <div>
-         <NavbarCss setSelection={this.updateCurrent} current={current} options={menu} />
-         {current === 'Videos' && <Youtube />}
-         {current === 'Translate' && <Translator />}
-         {current === 'Articles' && <WikiSearch />}
-         {current === 'Pictures' && <Pictures />}
+         <NavbarCss setSelection={this.updateCurrent} 
+                    current={current} options={menu} />
+         {pathname === '/widgets' && <Youtube />}
+         {pathname === '/widgets/translate' && <Translator />}
+         {pathname === '/widgets/wiki' && <WikiSearch />}
+         {pathname === '/widgets/pictures' && <Pictures />}
       </div>
     )
   }

@@ -5,7 +5,7 @@ const NavbarCss = ({setSelection, current, options}) => {
   const menuList = options.map((item, index) => {
     return (
       <li key={index} 
-          onClick={() => setSelection(item.option)}
+          onClick={() => setSelection(item.option, item.path)}
           > 
         <span href="/"
         className={`${current === item.option?'active':''}`}
