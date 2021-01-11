@@ -4,9 +4,10 @@ const NavbarCss = ({options, basePath}) => {
 
   const menuList = options.map((item, index) => {
     return (
-      <li key={index}> 
-        <a href={window.location.origin+basePath+item.path}
-        className={`${window.location.pathname=== basePath + item.path?'active':''}`}
+      <li key={index}
+      > 
+        <a href={basePath + item.path}
+        className={`${window.location.pathname=== basePath+item.path?'active':''}`}
         >
           {item.option}
         </a>
