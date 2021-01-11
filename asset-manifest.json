@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/widgets-demo/static/css/main.0d0727f2.chunk.css",
+    "main.js": "/widgets-demo/static/js/main.bac2b9c2.chunk.js",
+    "main.js.map": "/widgets-demo/static/js/main.bac2b9c2.chunk.js.map",
+    "runtime-main.js": "/widgets-demo/static/js/runtime-main.db6ab0d0.js",
+    "runtime-main.js.map": "/widgets-demo/static/js/runtime-main.db6ab0d0.js.map",
+    "static/css/2.1f77f366.chunk.css": "/widgets-demo/static/css/2.1f77f366.chunk.css",
+    "static/js/2.d19e952a.chunk.js": "/widgets-demo/static/js/2.d19e952a.chunk.js",
+    "static/js/2.d19e952a.chunk.js.map": "/widgets-demo/static/js/2.d19e952a.chunk.js.map",
+    "index.html": "/widgets-demo/index.html",
+    "static/css/2.1f77f366.chunk.css.map": "/widgets-demo/static/css/2.1f77f366.chunk.css.map",
+    "static/css/main.0d0727f2.chunk.css.map": "/widgets-demo/static/css/main.0d0727f2.chunk.css.map",
+    "static/js/2.d19e952a.chunk.js.LICENSE.txt": "/widgets-demo/static/js/2.d19e952a.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/widgets-demo/static/media/outline-icons.ddae9b1b.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db6ab0d0.js",
+    "static/css/2.1f77f366.chunk.css",
+    "static/js/2.d19e952a.chunk.js",
+    "static/css/main.0d0727f2.chunk.css",
+    "static/js/main.bac2b9c2.chunk.js"
+  ]
+}
