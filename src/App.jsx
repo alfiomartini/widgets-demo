@@ -28,12 +28,23 @@ const menu = [
 ]
 
 class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {pathName:''};
+  }
+
+  componentDidMount() {
+    //  this.setState({pathName:window.location.path});
+     console.log('Hello mounted');
+  }
 
   render(){
+    console.log('Rendering again');
     return(
       <div>
          <NavbarCss options={menu}
                     basePath={basePathName}
+                    
           />
           <Route path={basePathName + '/'}>
             {/* inner component inside a component = children prop */}
