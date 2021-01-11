@@ -6,7 +6,7 @@ import Translator from './components/Translator';
 import NavbarCss from './components/NavbarCss';
 import Route from './components/Route';
 
-const basePathName = '/widgets';
+const basePathName = '/widgets-demo';
 
 const menu = [
   {
@@ -28,7 +28,7 @@ const menu = [
 ]
 
 class App extends React.Component {
-  
+
   render(){
     return(
       <div>
