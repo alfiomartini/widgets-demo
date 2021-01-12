@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from './Link';
+
 import './css/NavbarCss.css';
 const NavbarCss = ({options, basePath}) => {
 
@@ -6,11 +8,11 @@ const NavbarCss = ({options, basePath}) => {
     return (
       <li key={index}
       > 
-        <a href={basePath + item.path}
+        <Link href={basePath + item.path}
         className={`${window.location.pathname=== basePath+item.path?'active':''}`}
         >
           {item.option}
-        </a>
+        </Link>
       </li>
     )
   })

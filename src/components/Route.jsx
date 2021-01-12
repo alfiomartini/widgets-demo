@@ -1,9 +1,25 @@
+import { useEffect, useState } from 'react';
 
 const Route = ({path, children}) =>{
-  // console.log(path, children.type.name);
-  // console.log(window.location.pathname, path);
+
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  
+  const onLocationChange = () => {
+    console.log('Location changed');
+    // forces the component to rerender itself
+    setCurrentPath(window.location.pathname);
+  }
+
+  // only runs when the component first renders to the screen
+  useEffect(() =>{
+    window.addEventListener('popstate', onLocationChange)
+    return () => {
+      window.removeEventListener('popstate', onLocationChange);
+    }
+  }, []);
+
   return(
-    window.location.pathname === path
+    currentPath === path
     ? children : null
   )
 }

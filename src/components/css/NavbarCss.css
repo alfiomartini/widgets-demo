@@ -14,7 +14,7 @@
   font-size: 16px;
 }
 
-.menu-list li a {
+.menu-list li .link {
   color: whitesmoke;
   text-decoration: none;
   padding: 5px 10px;
@@ -22,12 +22,12 @@
   cursor: pointer;
 }
 
-.menu-list li a:hover {
+.menu-list li .link:hover {
   color: #303030;
   background-color: whitesmoke;
 }
 
-.menu-list li a.active {
+.menu-list li .link.active {
   color: lightgreen;
 }
 
